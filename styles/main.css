@@ -406,6 +406,10 @@ button:hover {
   bottom: 10%;
 }
 
+.answers .gallery-cell .overlay p.credit {
+  font-size: 1rem;
+}
+
 .answers .gallery-cell .overlay .colContainer {
   font-weight: 300;
   position: absolute;
@@ -546,7 +550,11 @@ footer p a:hover {
   .answers {
     padding: 0;
   }
+  .answers .gallery {
+    width: 100%;
+  }
   .answers .gallery .gallery-cell {
+    height: 100vh;
     width: 100%;
   }
   .answers .gallery .gallery-cell .imageContainer img {
@@ -555,8 +563,13 @@ footer p a:hover {
 }
 
 @media (max-width: 620px) {
-  .answers .gallery .gallery-cell {
-    height: 100vh;
+  .answers .gallery .gallery-cell p {
+    line-height: 2.5rem;
+  }
+  .answers .gallery .gallery-cell .imageContainer img {
+    width: 200%;
+    position: relative;
+    left: -40%;
   }
 }
 
