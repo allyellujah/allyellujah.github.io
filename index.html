@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Toronto Activity Quiz</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css"> -->
+</head>
+<body>
+	<div class="wrapper">
+	<div class="background">
+		<img src="images/hero.jpg" alt="">
+	</div><!-- .background -->
+		<header id="top">
+			<div class="tile">
+				<h1>What to do in</h1>
+				<h2>Toronto</h2>
+				<a href="#questions"><button>Start quiz!</button></a>
+			</div><!-- /tile -->
+		</header>
+		<section id="questions" class="questions">
+			<div class="formContainer">
+				<div class="purple"></div>
+				<form>
+					<fieldset class="budget">
+						<h2>What is your budget?</h2>
+							<input type="radio" value="free" id="free" name="budget" required>
+							<label for="free">Free</label>
+							<input type="radio" value="under10" id="under10" name="budget">
+							<label for="under10">Under $10</label>
+							<input type="radio" value="under50" id="under50" name="budget">
+							<label for="under50">Under $50</label>
+							<input type="radio" value="expensive" id="expensive" name="budget">
+							<label for="expensive">Make it Rain</label>
+					</fieldset><!-- .budget -->
+					<fieldset class="activity">
+						<h2>How active are you feeling right now?</h2>
+							<input type="radio" value="run" name="activity" id="run" required>
+							<label for="run">I want to scale walls.</label>
+							<input type="radio" value="walk" id="walk" name="activity">
+							<label for="walk">I could go on a good walk.</label>
+							<input type="radio" value="food" id="food" name="activity">
+							<label for="food">I want to lift a fork to my mouth.</label>
+							<input type="radio" value="hungover" id="hungover" name="activity">
+							<label for="hungover">Hungover.</label>
+					</fieldset><!-- .activity -->
+					<div class="submit">
+						<a href="#answers" class="smoothScroll">
+							<input type="submit" value="Get ideas!">
+						</a>
+					</div>
+				</form>
+			</div><!-- .formContainer -->
+		</section><!-- .questions -->
+		<section id="answers" class="answers">
+			<h3>Try one of these things!</h3>
+			<div class="gallery js-flickity">
+				<!-- results go here -->
+				<!-- placeholder code for styling...
+				<div class="gallery-cell">
+					<div class="imageContainer">
+						<img src="">
+					</div>
+					<div class="purple"></div>
+					<div class="overlay">
+						<h2></h2>
+						<p>	</p>
+						<div class="colContainer clearfix">
+							<div class="col col1"><i class="fa fa-bookmark-o"></i><a href=""></a></div>
+							<div class="col col2"><i class="fa fa-map-marker"></i></div>
+						</div>
+						<p>Photo:</p>
+					</div>
+				</div> -->
+			</div><!-- flickity div -->
+		<footer>
+			<button><a href="#top">Start over</a></button>
+			<p>Created by <a href="http://www.allyevice.com" target="_blank">Allye Vice</a> and <a href="http://www.lukediamantopoulos.com">Luke Diamantopoulos</a></p>
+		</footer>
+		</section>
+	</div><!-- .wrapper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script src="script.js"></script>
+	<!-- <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script> -->
+	<!-- <script src="flickity.js"></script> -->
+</body>
+</html>  

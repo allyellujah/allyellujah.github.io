@@ -1,0 +1,251 @@
+@import "setup";
+@import "grid";
+
+$mainPurple: #6C28B1;
+$white: #ECF0F1;
+
+	html {
+		font-size: 62.5%;
+	}
+
+	body {
+		font-family: 'Lato', sans-serif;
+		font-size: 1.6rem;
+		color: $white;
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+		p, label {
+			font-weight: 300;
+		}
+		h3 {
+			color: $mainPurple;
+			font-size: 2.5rem;
+			text-align: center;
+		}
+	}
+
+	.background {
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		img {
+			width: 100%;
+		}
+	}
+
+	.opacity {
+		opacity: .2;
+		transition: all .2s;
+	}
+
+	.wrapper {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+
+	header {
+		transition: all .5s;
+		height: 100vh;
+		text-align: center;
+		.tile {	
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100vh;
+		}
+		h1 {
+			font-size: 6rem;
+			padding-top: 10%;
+			font-weight: bold;
+		}
+		h2 {
+			display: none;
+		}
+	}
+
+	button {
+		background: $mainPurple;
+		border: 0;
+		color: $white;
+		margin: 0 auto;
+		width: 200px;
+		height: 50px;
+		margin-bottom: 5%;
+	}
+	button:hover {
+		color: #FFFFFF;
+		text-shadow: 0 0 1px #FFFFFF;
+	}
+	.purple {
+		background: linear-gradient(135deg, #5507A6, #9453D7);
+		opacity: 0.8;
+	}
+
+	.questions {
+		transition: all .5s;
+		height: 100vh;
+		display: none;
+		padding-top: 100px;
+		.formContainer {
+			width: 700px;
+			margin: 0 auto;
+			padding: 20px;
+			text-align: center;
+			position: relative;
+			z-index: 1;
+			.purple {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 2;
+			}
+			fieldset {
+				position: relative;
+				z-index: 3;
+				border: 0;
+			}
+
+			input[type=radio] {
+				opacity: 0;
+			}
+			
+			input[type=radio]:hover + label {
+				color: #FFFFFF;
+				text-shadow: 0 0 1px #FFFFFF;
+			}
+
+			input[type=radio]:checked + label {
+				color: #FFD700;
+			}
+			input[type=submit] {
+				margin: 20px;
+				background:none;
+				color: $white;
+				margin: 0 auto;
+				margin-top: 40px;
+				width: 200px;
+				height: 50px;
+				margin-bottom: 5%;
+				position: relative;
+				z-index: 3;
+				border: 3px white solid;
+				
+			}
+			input[type=submit]:hover {
+				background: $white;
+				color: $mainPurple;
+				text-shadow: 0 0 1px $mainPurple;
+			}
+			.activity {
+				h2 {
+					margin-bottom: 0;
+				}
+				label {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.answers {
+		transition: all .5s;
+		display: none;
+		height: 100vh;
+		padding: 20px;
+		.gallery {
+			list-style:none;
+			margin: 0;
+		}
+		.gallery-cell {
+			position: relative;
+			width: 700px;
+			margin: 0 auto 50px;
+			.imageContainer {
+				img {
+					width: 100%;
+					display: block;
+				}
+			}
+			.overlay, .purple {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			.overlay {
+				margin-top: 15%;
+				padding: 40px;
+				h2 {
+					text-transform: uppercase;
+					letter-spacing: 4px;
+					position: relative;
+					bottom: 15%;
+					margin-bottom: 10px;
+				}
+				p {
+					position: relative;
+					bottom: 10%;
+				}
+				.colContainer {
+					font-weight: 300;
+					position: absolute;
+					bottom: 0;
+					left: 40px;
+					right: 40px;
+					border-top: 1px solid $white;
+					padding: 20px 0;
+					.col {
+						float: left; 
+						width: 50%;
+						i {
+							padding-right: 10px;
+						}
+					}
+					.col2 {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		text-align: center;
+		button {
+			position: relative;
+			bottom: 10px;
+			right: 0;
+			left: 0;
+			z-index: 5;
+			margin-bottom: 0;
+			transition: all .3s;
+		}
+		button:hover {
+			background: darken($mainPurple, 5%);
+		}
+		p {
+			color: grey;
+			position: relative; 
+			bottom: 10px;
+			padding: 10px;
+			a {
+				color:  #666666;
+			}
+			a:hover {
+				color: grey;
+				text-shadow: 0 0 1px grey;
+			}
+		}
+	}
+
+@import "responsive";

@@ -1,0 +1,13 @@
+@media (max-width: 1080px) {
+  body {
+    background: url();
+  }
+  .background {
+    display: none;
+  }
+  header h2 {
+    display: block;
+    color: #ECF0F1;
+    font-size: 4rem;
+  }
+}
