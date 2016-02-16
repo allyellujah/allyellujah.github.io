@@ -147,7 +147,7 @@ var database = {
 			"title": "Edge Walk",
 			"price": "$$$$",
 			"activity": "run",
-			"content": "If you have ever seen the tallest structure in Toronto and thought 'I want to stand on top of that', this activity is you.",
+			"content": "If you have ever seen the tallest structure in Toronto and thought 'I want to stand on top of that', this activity is for you.",
 			"url": "http://www.edgewalkcntower.ca/",
 			"urlDesc": "CN Tower Edge Walk website",
 			"address": "301 Front St. W, Toronto, ON",
