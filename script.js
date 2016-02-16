@@ -168,7 +168,7 @@ var database = {
 			"photoCredit": "Pexels"
 			},
 			{
-			"title": "Have an Epic Ceasar at Brunch",
+			"title": "Have an Epic Caesar at Brunch",
 			"price": "$$$",
 			"activity": "food",
 			"content": "Hunter's Landing in Cityplace and William's Landing in Liberty Village have 'The Landing Cure', a caesar that includes a lobster tail, a pizza slice and chorizo. This concoction has been voted the best caesar in Toronto by a few different publications, including Taste Toronto.",
@@ -190,7 +190,7 @@ var database = {
 			"photoCredit": "Winterlicious/Summerlicious Facebook page"
 			},
 			{
-			"title": "Have an Epic Ceasar at Brunch",
+			"title": "Have an Epic Caesar at Brunch",
 			"price": "$$$",
 			"activity": "hungover",
 			"content": "Hunter's Landing in Cityplace and William's Landing in Liberty Village have 'The Landing Cure', a caesar that includes a lobster tail, a pizza slice and chorizo. This concotion has been voted the best caesar in Toronto by a few different publications, including Taste Toronto.",
