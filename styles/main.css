@@ -546,25 +546,17 @@ footer p a:hover {
   .answers {
     padding: 0;
   }
-  .answers .gallery {
+  .answers .gallery .gallery-cell {
     width: 100%;
   }
-  .answers .gallery .gallery-cell {
-    height: 100vh;
-  }
   .answers .gallery .gallery-cell .imageContainer img {
-    height: 100%;
+    height: 100vh;
   }
 }
 
 @media (max-width: 620px) {
-  .answers .gallery .gallery-cell p {
-    line-height: 2.5rem;
-  }
-  .answers .gallery .gallery-cell .imageContainer img {
-    width: 200%;
-    position: relative;
-    left: -40%;
+  .answers .gallery .gallery-cell {
+    height: 100vh;
   }
 }
 

@@ -88,6 +88,11 @@ $white: #ECF0F1;
 						height: 100%;
 					}
 				}
+				.overlay {
+					p {
+						font-size: 
+					}
+				}
 			}
 
 		}
@@ -98,15 +103,9 @@ $white: #ECF0F1;
 	.answers {
 		.gallery {
 			.gallery-cell {
+				height: 100vh;
 				p {
 					line-height: 2.5rem;
-				}
-				.imageContainer {
-					img {
-						width: 200%;
-						position: relative;
-						left: -40%;
-					}
 				}
 			}
 		}
