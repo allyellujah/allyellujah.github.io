@@ -546,17 +546,25 @@ footer p a:hover {
   .answers {
     padding: 0;
   }
-  .answers .gallery .gallery-cell {
+  .answers .gallery {
     width: 100%;
   }
-  .answers .gallery .gallery-cell .imageContainer img {
+  .answers .gallery .gallery-cell {
     height: 100vh;
+  }
+  .answers .gallery .gallery-cell .imageContainer img {
+    height: 100%;
   }
 }
 
 @media (max-width: 620px) {
-  .answers .gallery .gallery-cell {
-    height: 100vh;
+  .answers .gallery .gallery-cell p {
+    line-height: 2.5rem;
+  }
+  .answers .gallery .gallery-cell .imageContainer img {
+    width: 200%;
+    position: relative;
+    left: -40%;
   }
 }
 
