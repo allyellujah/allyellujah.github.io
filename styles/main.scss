@@ -12,6 +12,7 @@ $white: #ECF0F1;
 		font-family: 'Lato', sans-serif;
 		font-size: 1.6rem;
 		color: $white;
+		background: url(../images/tile.png);
 		a {
 			color: $white;
 			text-decoration: none;
@@ -26,20 +27,6 @@ $white: #ECF0F1;
 		}
 	}
 
-	.background {
-		height: 100%;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		z-index: -1;
-		img {
-			width: 100%;
-		}
-	}
-
 	.opacity {
 		opacity: .2;
 		transition: all .2s;
@@ -48,6 +35,7 @@ $white: #ECF0F1;
 	.wrapper {
 		max-width: 1280px;
 		margin: 0 auto;
+		position: relative;
 	}
 
 	header {
@@ -59,6 +47,12 @@ $white: #ECF0F1;
 			flex-direction: column;
 			justify-content: space-between;
 			height: 100vh;
+			background: linear-gradient(135deg, #5507A6, #9453D7);
+			opacity: 0.9;
+			width: 700px;
+			height: 90vh;
+			margin: 2% auto;
+			justify-content: center;
 		}
 		h1 {
 			font-size: 6rem;
@@ -66,26 +60,25 @@ $white: #ECF0F1;
 			font-weight: bold;
 		}
 		h2 {
-			display: none;
+			font-size: 10rem;
+			text-transform: uppercase;
+			margin-top:0;
 		}
 	}
 
 	button {
-		background: $mainPurple;
-		border: 0;
-		color: $white;
-		margin: 0 auto;
-		width: 200px;
-		height: 50px;
-		margin-bottom: 5%;
+		background: none;
+		color: white;
+		border: 3px white solid;
+		padding: 10px;
+		&:hover {
+			background:$white;
+			color: $mainPurple;
+		}
 	}
-	button:hover {
-		color: #FFFFFF;
-		text-shadow: 0 0 1px #FFFFFF;
-	}
-	.purple {
+	.purple, .mobilePurple {
 		background: linear-gradient(135deg, #5507A6, #9453D7);
-		opacity: 0.8;
+		opacity: 0.9;
 	}
 
 	.questions {
@@ -159,21 +152,37 @@ $white: #ECF0F1;
 	.answers {
 		transition: all .5s;
 		display: none;
-		height: 100vh;
 		padding: 20px;
-		.gallery {
-			list-style:none;
+		.main-carousel {
 			margin: 0;
 		}
-		.gallery-cell {
+		.carousel-cell {
 			position: relative;
 			width: 700px;
 			margin: 0 auto 50px;
+			.flickity-prev-next-button {
+			  background: transparent;
+			}
+			.flickity-prev-next-button:hover {
+			  background: transparent;
+			}
+			/* arrow color */
+			.flickity-prev-next-button .arrow {
+			  fill: white;
+			}
+			.flickity-prev-next-button.no-svg {
+			  color: white;
+			}
+			/* hide disabled button */
+			.flickity-prev-next-button:disabled {
+			  display: none;
+			}
 			.imageContainer {
-				img {
-					width: 100%;
-					display: block;
-				}
+				width: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				padding-bottom: 50%;
+				position:relative;
 			}
 			.overlay, .purple {
 				position: absolute;
@@ -182,8 +191,16 @@ $white: #ECF0F1;
 				right: 0;
 				bottom: 0;
 			}
+			.mobilePurple {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
 			.overlay {
-				margin-top: 15%;
+				margin-top: 10%;
 				padding: 40px;
 				h2 {
 					text-transform: uppercase;
@@ -196,12 +213,16 @@ $white: #ECF0F1;
 					position: relative;
 					bottom: 10%;
 				}
+				.credit {
+					font-size: 1.2rem;
+				}
 				.colContainer {
 					font-weight: 300;
 					position: absolute;
 					bottom: 0;
 					left: 40px;
 					right: 40px;
+					font-size: 1.2rem;
 					border-top: 1px solid $white;
 					padding: 20px 0;
 					.col {
@@ -222,16 +243,17 @@ $white: #ECF0F1;
 	footer {
 		text-align: center;
 		button {
-			position: relative;
-			bottom: 10px;
-			right: 0;
-			left: 0;
-			z-index: 5;
-			margin-bottom: 0;
-			transition: all .3s;
-		}
-		button:hover {
-			background: darken($mainPurple, 5%);
+			background: $mainPurple;
+			color: white;
+			border: 3px $mainPurple solid;
+			padding: 10px;
+			transition: all .2s;
+			&:hover {
+				background:$white;
+				a {	
+					color: $mainPurple;
+				}
+			}
 		}
 		p {
 			color: grey;

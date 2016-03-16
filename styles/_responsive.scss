@@ -10,9 +10,6 @@ $white: #ECF0F1;
 		opacity: 0.9;
 	}
 
-	.background {
-		display: none;
-	}
 	header {
 		height: auto;
 		.tile {
@@ -26,22 +23,6 @@ $white: #ECF0F1;
 		h1 {
 			font-size: 3rem;
 			font-weight: 300;
-		}
-		h2 {
-			display: block;
-			font-size: 10rem;
-			text-transform: uppercase;
-			margin-top:0;
-
-		}
-		button {
-			background: none;
-			color: white;
-			border: 3px white solid;
-			&:hover {
-				background:white;
-				color: purple;
-			}
 		}
 	}
 	.questions {
@@ -79,18 +60,14 @@ $white: #ECF0F1;
 
 	.answers {
 		padding: 0;
-		.gallery {
+		.main-carousel {
 			width: 100%;
-			.gallery-cell {
-				height: 100vh;
-				.imageContainer {
-					img {
-						height: 100%;
-					}
-				}
+			.carousel-cell {
+				width: 100%;
 				.overlay {
+					margin-top: 0;
 					p {
-						font-size: 
+						font-size: 1.4rem; 
 					}
 				}
 			}
@@ -101,11 +78,43 @@ $white: #ECF0F1;
 
 @media (max-width:620px) {
 	.answers {
-		.gallery {
-			.gallery-cell {
-				height: 100vh;
+		.main-carousel {
+			.carousel-cell {
+				.imgContainer {
+					background-position: top;
+					padding-bottom: 75%;
+				}
+				.purple {
+					display: none;
+				}
+				.mobilePurple {
+					display: block;
+				}
+				.overlay {
+					position: static;
+					color: $mainPurple;
+					padding: 10px;
+				}
 				p {
 					line-height: 2.5rem;
+					text-align: center;
+				}
+				.colContainer {
+					border: 0;
+					position: relative;
+					left: 0;
+					right: 0;
+					bottom: auto;
+					.col {
+						float: none;
+						width: 100%;
+						text-align: center;
+						padding: 5px;
+					}
+					a {
+						color: darken($mainPurple, 10%);
+					}
+
 				}
 			}
 		}
