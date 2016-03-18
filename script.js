@@ -713,7 +713,7 @@ todo.sort = function () {
 		var cardIndex = resultList[i];
 		// console.log(cardIndex);
 		todo.image = cardIndex['image'];
-		todo.cardRendered = '<div class="carousel-cell"><div class="imageContainer" style="background:url(' + todo.image + ')" ><div class="mobilePurple"></div></div><div class="purple"></div><div class="overlay"><h2>' + cardIndex['title'] + '</h2><p>' + cardIndex['content'] + '</p><p class="credit">Photo: ' + cardIndex['photoCredit'] + '</p><div class="colContainer clearfix"><div class="col col1"><i class="fa fa-bookmark-o"></i><a href="' + cardIndex['url'] + '" target="_blank">' + cardIndex['urlDesc'] + '</a></div><div class="col col2"><i class="fa fa-map-marker"></i>' + cardIndex['address'] + '</div></div></div></div>';
+		todo.cardRendered = '<div class="carousel-cell"><div class="imageContainer" style="background:url(' + todo.image + '); background-size:cover;"><div class="mobilePurple"></div></div><div class="purple"></div><div class="overlay"><h2>' + cardIndex['title'] + '</h2><p>' + cardIndex['content'] + '</p><p class="credit">Photo: ' + cardIndex['photoCredit'] + '</p><div class="colContainer clearfix"><div class="col col1"><i class="fa fa-bookmark-o"></i><a href="' + cardIndex['url'] + '" target="_blank">' + cardIndex['urlDesc'] + '</a></div><div class="col col2"><i class="fa fa-map-marker"></i>' + cardIndex['address'] + '</div></div></div></div>';
 
 		$('.answers .main-carousel').append(todo.cardRendered);
 	} //end of for loop

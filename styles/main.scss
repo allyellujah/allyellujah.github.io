@@ -40,7 +40,6 @@ $white: #ECF0F1;
 
 	header {
 		transition: all .5s;
-		height: 100vh;
 		text-align: center;
 		.tile {	
 			display: flex;
@@ -161,21 +160,7 @@ $white: #ECF0F1;
 			width: 700px;
 			margin: 0 auto 50px;
 			.flickity-prev-next-button {
-			  background: transparent;
-			}
-			.flickity-prev-next-button:hover {
-			  background: transparent;
-			}
-			/* arrow color */
-			.flickity-prev-next-button .arrow {
-			  fill: white;
-			}
-			.flickity-prev-next-button.no-svg {
-			  color: white;
-			}
-			/* hide disabled button */
-			.flickity-prev-next-button:disabled {
-			  display: none;
+				top: 100%;
 			}
 			.imageContainer {
 				width: 100%;
@@ -187,17 +172,21 @@ $white: #ECF0F1;
 			.overlay, .purple {
 				position: absolute;
 				top: 0;
-				left: 0;
-				right: 0;
+				left: -1px;
+				right: -1px;
 				bottom: 0;
 			}
 			.mobilePurple {
 				display: none;
 				position: absolute;
 				top: 0;
-				left: 0;
-				right: 0;
+				left: -1px;
+				right: -1px;
 				bottom: 0;
+			}
+
+			.purple, .mobilePurple {
+				width: 101%;
 			}
 			.overlay {
 				margin-top: 10%;

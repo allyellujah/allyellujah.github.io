@@ -166,7 +166,6 @@ body {
 
 header {
   transition: all .5s;
-  height: 100vh;
   text-align: center; }
   header .tile {
     display: -webkit-flex;
@@ -269,19 +268,9 @@ button {
   .answers .carousel-cell {
     position: relative;
     width: 700px;
-    margin: 0 auto 50px;
-    /* arrow color */
-    /* hide disabled button */ }
+    margin: 0 auto 50px; }
     .answers .carousel-cell .flickity-prev-next-button {
-      background: transparent; }
-    .answers .carousel-cell .flickity-prev-next-button:hover {
-      background: transparent; }
-    .answers .carousel-cell .flickity-prev-next-button .arrow {
-      fill: white; }
-    .answers .carousel-cell .flickity-prev-next-button.no-svg {
-      color: white; }
-    .answers .carousel-cell .flickity-prev-next-button:disabled {
-      display: none; }
+      top: 100%; }
     .answers .carousel-cell .imageContainer {
       width: 100%;
       background-repeat: no-repeat;
@@ -291,16 +280,18 @@ button {
     .answers .carousel-cell .overlay, .answers .carousel-cell .purple {
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      left: -1px;
+      right: -1px;
       bottom: 0; }
     .answers .carousel-cell .mobilePurple {
       display: none;
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      left: -1px;
+      right: -1px;
       bottom: 0; }
+    .answers .carousel-cell .purple, .answers .carousel-cell .mobilePurple {
+      width: 101%; }
     .answers .carousel-cell .overlay {
       margin-top: 10%;
       padding: 40px; }
@@ -356,24 +347,9 @@ footer {
       text-shadow: 0 0 1px grey; }
 
 @media (max-width: 1080px) {
-  body {
-    background: url(../images/tile.png); }
-  .purple {
-    opacity: 0.9; }
-  header {
-    height: auto; }
-    header .tile {
-      background: linear-gradient(135deg, #5507A6, #9453D7);
-      opacity: 0.9;
-      width: 700px;
-      height: 90vh;
-      margin: 2% auto;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 300; }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 300; }
   .questions {
     padding-top: 50px; } }
 

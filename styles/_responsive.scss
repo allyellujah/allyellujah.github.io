@@ -2,24 +2,7 @@ $mainPurple: #6C28B1;
 $white: #ECF0F1;
 
 @media (max-width: 1080px) {
-	body {
-		background: url(../images/tile.png);
-	}
-
-	.purple {
-		opacity: 0.9;
-	}
-
 	header {
-		height: auto;
-		.tile {
-			background: linear-gradient(135deg, #5507A6, #9453D7);
-			opacity: 0.9;
-			width: 700px;
-			height: 90vh;
-			margin: 2% auto;
-			justify-content: center;
-		}
 		h1 {
 			font-size: 3rem;
 			font-weight: 300;
